@@ -18,17 +18,17 @@
 - (UIImageView *)topView
 {
     if (!_topView) {
-        _topView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg1"]];
+        _topView = [[UIImageView alloc] init];
         _topView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 220);
-        
+        _topView.contentMode = UIViewContentModeScaleAspectFill;
            }
     return _topView;
 }
 - (UILabel *)nameLB
 {
     if (!_nameLB) {
-        _nameLB = [[UILabel alloc] initWithFrame:CGRectMake(120, 220 - 50, 100, 40)];
-        _nameLB.font = [UIFont boldSystemFontOfSize:16];
+        _nameLB = [[UILabel alloc] initWithFrame:CGRectMake(140, 170, 250, 40)];
+        _nameLB.font = [UIFont boldSystemFontOfSize:17];
         _nameLB.textColor = [UIColor whiteColor];
     }
     return _nameLB;
@@ -48,6 +48,9 @@
 
 -(void)setName:(NSString *)name{
     self.nameLB.text = name;
+}
+-(void)setCover:(NSString *)cover{
+    [self.topView setImage:[UIImage imageNamed:cover]];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

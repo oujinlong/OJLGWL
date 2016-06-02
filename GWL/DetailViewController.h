@@ -10,4 +10,5 @@
 
 @interface DetailViewController : UIViewController
 -(void)setName:(NSString*)name;
+-(void)setCover:(NSString*)cover;
 @end

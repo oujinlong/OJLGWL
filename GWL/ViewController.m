@@ -49,7 +49,7 @@
     DetailViewController* vc = [[DetailViewController alloc] init];
     FilmCollectionViewCell* cell = (FilmCollectionViewCell*)[self.homeView cellForItemAtIndexPath:indexPath];
     [vc setName:cell.model.name];
-    
+    [vc setCover:cell.model.cover];
     [((OUNavigationController*)self.navigationController) pushViewController:vc withImageView:cell.imageView desRect:CGRectMake(20, 150, cell.imageView.bounds.size.width, cell.imageView.bounds.size.height)];
 }
 #pragma mark UICollectionViewDelegate,UICollectionViewDataSource

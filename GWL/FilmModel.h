@@ -11,5 +11,6 @@
 @interface FilmModel : NSObject
 @property (nonatomic, copy) NSString * image;
 @property (nonatomic, copy) NSString * name;
+@property (nonatomic, assign) NSString* cover;
 +(NSArray*)filmArray;
 @end

@@ -91,7 +91,8 @@
             } completion:^(BOOL finished) {
                 imageView.layer.shadowRadius = 5;
                 imageView.layer.shadowOpacity = 5;
-                
+                imageView.layer.borderColor = [UIColor whiteColor].CGColor;
+                imageView.layer.borderWidth = 3;
                 
                 
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -158,6 +159,7 @@
                 break;
             }
         }
+        imageView.layer.borderWidth = 0;
         imageView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
         imageView.layer.shadowOffset = CGSizeMake(0, 0);
         imageView.layer.shadowOpacity = 5;

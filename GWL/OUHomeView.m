@@ -14,7 +14,7 @@
     UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];
     
     if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
-        CGFloat panding = 20;
+        CGFloat panding = 15;
         NSInteger numberOfCol = 3;
         CGFloat width = ([UIScreen mainScreen].bounds.size.width - (numberOfCol + 1) * panding)/numberOfCol;
         self.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1];
